@@ -1,0 +1,42 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { action } from "@storybook/addon-actions";
+import Tag, { TagStates } from "./Tag";
+
+<Meta title="Components/Tag" component={Tag} />
+
+# Tag
+
+Tags can be used by users to select a specific ingredient or category from a list of tags.
+Once it is selected, it will be added to the search field.
+
+## Default tag
+
+Users should be able to click or press on a specific tag.
+
+<Preview>
+  <Story name="default">
+    <Tag
+      tag={{
+        id: "1",
+        title: "Tomaten",
+        state: TagStates.TAG_UNSELECTED
+      }}
+    />
+  </Story>
+</Preview>
+
+## Selected tag
+
+Users should be able to remove selected tags.
+
+<Preview>
+  <Story name="selected">
+    <Tag
+      tag={{
+        id: "1",
+        title: "Tomaten",
+        state: TagStates.TAG_SELECTED
+      }}
+    />
+  </Story>
+</Preview>
